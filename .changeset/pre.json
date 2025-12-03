@@ -2,9 +2,14 @@
   "mode": "pre",
   "tag": "next",
   "initialVersions": {
-    "@dsqr/teaser": "0.0.1"
+    "@dsqr/teaser": "0.0.1",
+    "@teaser/examples-basic": "0.0.1"
   },
   "changesets": [
+    "funny-tips-jam",
+    "late-cycles-thank",
+    "old-cars-write",
+    "vast-adults-hunt",
     "wise-garlics-enter"
   ]
 }

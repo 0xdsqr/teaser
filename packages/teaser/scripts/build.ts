@@ -17,3 +17,7 @@ await Bun.build({
 })
 
 await $`tsc --outDir dist/types --declaration --emitDeclarationOnly --declarationMap`
+
+// Copy CSS files to dist
+await $`cp src/index.css dist/esm/`
+await $`cp -r src/styles dist/esm/`

@@ -1,5 +1,5 @@
 {
-  description = "dodo";
+  description = "teaser - composable coming soon landing page components";
 
   inputs = {
     # Core Nixpkgs + compatibility

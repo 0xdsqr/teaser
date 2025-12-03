@@ -1,10 +1,10 @@
 "use client"
 
 import { Slot } from "@radix-ui/react-slot"
-import { Button } from "@workspace/ui/components/shadcn/button.js"
-import { Input } from "@workspace/ui/components/shadcn/input.js"
-import { cn } from "@workspace/ui/lib/utils.js"
 import type * as React from "react"
+import { cn } from "../lib/utils.js"
+import { Button } from "./shadcn/button.js"
+import { Input } from "./shadcn/input.js"
 
 function Teaser({ className, ...props }: React.ComponentProps<"div">) {
   return (

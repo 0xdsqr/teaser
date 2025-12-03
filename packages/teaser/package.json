@@ -1,6 +1,6 @@
 {
   "name": "@dsqr/teaser",
-  "version": "0.0.1-next.0",
+  "version": "0.0.1-next.4",
   "type": "module",
   "sideEffects": false,
   "scripts": {
@@ -29,6 +29,8 @@
       "import": "./dist/esm/index.js",
       "types": "./dist/types/index.d.ts"
     },
+    "./index.css": "./dist/esm/index.css",
+    "./styles/globals.css": "./dist/esm/styles/globals.css",
     "./*": {
       "import": "./dist/esm/*.js",
       "types": "./dist/types/*.d.ts"
