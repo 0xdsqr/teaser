@@ -1,0 +1,10 @@
+{
+  "mode": "pre",
+  "tag": "next",
+  "initialVersions": {
+    "@dsqr/teaser": "0.0.1"
+  },
+  "changesets": [
+    "wise-garlics-enter"
+  ]
+}
