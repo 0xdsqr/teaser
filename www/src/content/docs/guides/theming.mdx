@@ -1,0 +1,61 @@
+---
+title: Theming
+description: Customize Teaser with CSS variables
+---
+
+Teaser uses CSS variables for easy customization. All components automatically use these variables for consistent theming.
+
+## CSS Variables
+
+```css
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.205 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.205 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --border: oklch(0.205 0 0);
+  --input: oklch(0.205 0 0);
+  --ring: oklch(0.708 0 0);
+}
+```
+
+## Customization
+
+Override any variable in your CSS:
+
+```css
+:root {
+  --primary: #a78bfa;
+  --primary-foreground: #ffffff;
+  --radius: 0.5rem;
+}
+```
+
+## Dark Mode
+
+Teaser automatically respects the `dark` class on the root element:
+
+```tsx
+<html className="dark">{/* Your app */}</html>
+```
+
+All components will use the dark mode variables automatically.

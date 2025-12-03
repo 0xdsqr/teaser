@@ -1,0 +1,61 @@
+---
+title: Composability
+description: Build custom layouts with Teaser components
+---
+
+Teaser components are designed to be composable. Mix and match them to create exactly what you need.
+
+## Component Composition
+
+Each Teaser component is self-contained and can be used independently or combined with others.
+
+```tsx
+import {
+  Teaser,
+  TeaserIcon,
+  TeaserHeader,
+  TeaserTitle,
+  TeaserDescription,
+  TeaserForm,
+  TeaserInput,
+  TeaserButton,
+} from "@/components/ui/teaser";
+
+export function CustomLayout() {
+  return (
+    <Teaser className="max-w-lg">
+      <TeaserIcon animated>🎉</TeaserIcon>
+      <TeaserHeader>
+        <TeaserTitle>Custom Title</TeaserTitle>
+        <TeaserDescription>Your custom description</TeaserDescription>
+      </TeaserHeader>
+      <TeaserForm onEmailSubmit={handleSubmit}>
+        <TeaserInput />
+        <TeaserButton>Subscribe</TeaserButton>
+      </TeaserForm>
+    </Teaser>
+  );
+}
+```
+
+## Flexible Content
+
+Use `TeaserContent` for custom layouts:
+
+```tsx
+<Teaser>
+  <TeaserIcon>🚀</TeaserIcon>
+  <TeaserContent>{/* Your custom content */}</TeaserContent>
+</Teaser>
+```
+
+## Styling
+
+All components accept `className` for custom styling:
+
+```tsx
+<Teaser className="max-w-md mx-auto">
+  <TeaserIcon className="text-4xl">✨</TeaserIcon>
+  <TeaserTitle className="text-3xl font-bold">Custom Styled Title</TeaserTitle>
+</Teaser>
+```

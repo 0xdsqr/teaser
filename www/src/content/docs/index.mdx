@@ -1,0 +1,84 @@
+---
+title: Teaser
+description: Composable coming soon landing page components
+---
+
+Composable coming soon landing page components. Built with React, TypeScript, and Tailwind CSS.
+
+**Install once. Use everywhere. Zero dependencies.**
+
+## The Problem
+
+Coming soon pages require repetitive boilerplate:
+
+- Email input validation
+- Form state management
+- Success/error UI states
+- Responsive animations
+- Theme consistency
+
+Building from scratch every time wastes time and introduces inconsistency.
+
+## The Solution
+
+Teaser provides battle-tested, composable components:
+
+- **Self-contained** - Each component works independently
+- **Composable** - Combine them exactly how you need
+- **Unstyled** - Use with any design system
+- **Themeable** - CSS variables for instant customization
+- **No dependencies** - Pure React + Tailwind
+
+## Quick Start
+
+```tsx
+"use client";
+
+import { useState } from "react";
+import {
+  Teaser,
+  TeaserHeader,
+  TeaserTitle,
+  TeaserDescription,
+  TeaserIcon,
+  TeaserForm,
+  TeaserInput,
+  TeaserButton,
+  TeaserSuccess,
+  TeaserSuccessIcon,
+  TeaserSuccessMessage,
+} from "@/components/ui/teaser";
+
+export default function ComingSoon() {
+  const [submitted, setSubmitted] = useState(false);
+
+  return (
+    <main className="min-h-screen flex items-center justify-center">
+      <Teaser>
+        <TeaserIcon animated>🚀</TeaserIcon>
+
+        <TeaserHeader>
+          <TeaserTitle>Something Amazing</TeaserTitle>
+          <TeaserDescription>
+            We're building something cool. Be the first to know.
+          </TeaserDescription>
+        </TeaserHeader>
+
+        {!submitted ? (
+          <TeaserForm onEmailSubmit={(email) => setSubmitted(true)}>
+            <TeaserInput placeholder="you@example.com" />
+            <TeaserButton>Notify Me</TeaserButton>
+          </TeaserForm>
+        ) : (
+          <TeaserSuccess>
+            <TeaserSuccessIcon>✨</TeaserSuccessIcon>
+            <TeaserSuccessMessage>Thanks for signing up!</TeaserSuccessMessage>
+          </TeaserSuccess>
+        )}
+      </Teaser>
+    </main>
+  );
+}
+```
+
+That's it. Deploy it.

@@ -1,0 +1,74 @@
+---
+title: Quick Start
+description: Get up and running with Teaser in minutes
+---
+
+Get started with Teaser in just a few minutes.
+
+## Installation
+
+Install Teaser using your preferred package manager:
+
+```bash
+bunx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/master/registry teaser
+```
+
+## Basic Usage
+
+```tsx
+"use client";
+
+import { useState } from "react";
+import {
+  Teaser,
+  TeaserHeader,
+  TeaserTitle,
+  TeaserDescription,
+  TeaserIcon,
+  TeaserForm,
+  TeaserInput,
+  TeaserButton,
+  TeaserSuccess,
+  TeaserSuccessIcon,
+  TeaserSuccessMessage,
+} from "@/components/ui/teaser";
+
+export default function ComingSoon() {
+  const [submitted, setSubmitted] = useState(false);
+
+  return (
+    <main className="min-h-screen flex items-center justify-center">
+      <Teaser>
+        <TeaserIcon animated>🚀</TeaserIcon>
+
+        <TeaserHeader>
+          <TeaserTitle>Something Amazing</TeaserTitle>
+          <TeaserDescription>
+            We're building something cool. Be the first to know.
+          </TeaserDescription>
+        </TeaserHeader>
+
+        {!submitted ? (
+          <TeaserForm onEmailSubmit={(email) => setSubmitted(true)}>
+            <TeaserInput placeholder="you@example.com" />
+            <TeaserButton>Notify Me</TeaserButton>
+          </TeaserForm>
+        ) : (
+          <TeaserSuccess>
+            <TeaserSuccessIcon>✨</TeaserSuccessIcon>
+            <TeaserSuccessMessage>Thanks for signing up!</TeaserSuccessMessage>
+          </TeaserSuccess>
+        )}
+      </Teaser>
+    </main>
+  );
+}
+```
+
+That's it! You now have a fully functional coming soon page.
+
+## Next Steps
+
+- [Learn about theming](/docs/guides/theming/)
+- [Explore all components](/docs/components/teaser/)
+- [Check out examples](/docs/reference/examples/)

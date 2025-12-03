@@ -1,0 +1,87 @@
+---
+title: Examples
+description: Real-world examples using Teaser
+---
+
+Check out these examples to see Teaser in action.
+
+## Kitchen Sink
+
+The complete example with all Teaser features:
+
+```bash
+cd examples/kitchen-sink
+bun install
+bun run dev
+```
+
+Visit `http://localhost:3000` to see the demo.
+
+## Minimal Example
+
+A simple coming soon page:
+
+```tsx
+import {
+  Teaser,
+  TeaserIcon,
+  TeaserForm,
+  TeaserInput,
+  TeaserButton,
+} from "@/components/ui/teaser";
+
+export default function Page() {
+  return (
+    <Teaser>
+      <TeaserIcon>🚀</TeaserIcon>
+      <TeaserForm onEmailSubmit={(email) => console.log(email)}>
+        <TeaserInput />
+        <TeaserButton>Notify Me</TeaserButton>
+      </TeaserForm>
+    </Teaser>
+  );
+}
+```
+
+## With Custom Styling
+
+```tsx
+import {
+  Teaser,
+  TeaserIcon,
+  TeaserHeader,
+  TeaserTitle,
+  TeaserForm,
+  TeaserInput,
+  TeaserButton,
+} from "@/components/ui/teaser";
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
+      <Teaser className="max-w-md">
+        <TeaserIcon className="text-5xl">✨</TeaserIcon>
+        <TeaserHeader>
+          <TeaserTitle className="text-4xl">Coming Soon</TeaserTitle>
+        </TeaserHeader>
+        <TeaserForm onEmailSubmit={(email) => console.log(email)}>
+          <TeaserInput />
+          <TeaserButton className="w-full">Get Notified</TeaserButton>
+        </TeaserForm>
+      </Teaser>
+    </div>
+  );
+}
+```
+
+## Dark Mode
+
+Teaser automatically supports dark mode:
+
+```tsx
+<html className="dark">
+  <body>
+    <Teaser>{/* Your content */}</Teaser>
+  </body>
+</html>
+```

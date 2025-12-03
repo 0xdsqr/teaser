@@ -1,0 +1,61 @@
+---
+title: Form Components
+description: Email form and input components
+---
+
+Form components for capturing email addresses with built-in validation.
+
+## TeaserForm
+
+The main form wrapper that handles email submission.
+
+```tsx
+import { TeaserForm, TeaserInput, TeaserButton } from "@/components/ui/teaser";
+
+<TeaserForm onEmailSubmit={(email) => console.log(email)}>
+  <TeaserInput />
+  <TeaserButton>Notify Me</TeaserButton>
+</TeaserForm>;
+```
+
+### Props
+
+| Prop            | Type                    | Default |
+| --------------- | ----------------------- | ------- |
+| `onEmailSubmit` | (email: string) => void | -       |
+| `children`      | ReactNode               | -       |
+
+## TeaserInput
+
+Pre-configured email input with automatic validation.
+
+```tsx
+import { TeaserInput } from '@/components/ui/teaser'
+
+<TeaserInput />
+<TeaserInput placeholder="name@company.com" />
+```
+
+### Props
+
+| Prop          | Type   | Default           |
+| ------------- | ------ | ----------------- |
+| `placeholder` | string | "you@example.com" |
+
+## TeaserButton
+
+Submit button for the form.
+
+```tsx
+import { TeaserButton } from '@/components/ui/teaser'
+
+<TeaserButton>Get Notified</TeaserButton>
+<TeaserButton className="w-full">Subscribe</TeaserButton>
+```
+
+### Props
+
+| Prop        | Type   | Default     |
+| ----------- | ------ | ----------- |
+| `children`  | string | "Notify Me" |
+| `className` | string | -           |

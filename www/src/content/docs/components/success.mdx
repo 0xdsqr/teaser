@@ -1,0 +1,53 @@
+---
+title: Success State
+description: Success message components
+---
+
+Components for displaying success state after email submission.
+
+## TeaserSuccess
+
+Container for success state with fade-in animation.
+
+```tsx
+import {
+  TeaserSuccess,
+  TeaserSuccessIcon,
+  TeaserSuccessMessage,
+} from "@/components/ui/teaser";
+
+<TeaserSuccess>
+  <TeaserSuccessIcon>✨</TeaserSuccessIcon>
+  <TeaserSuccessMessage>Thanks for joining!</TeaserSuccessMessage>
+</TeaserSuccess>;
+```
+
+## TeaserSuccessIcon
+
+Icon display for success state.
+
+```tsx
+<TeaserSuccessIcon>✨</TeaserSuccessIcon>
+<TeaserSuccessIcon asChild><CheckCircle /></TeaserSuccessIcon>
+```
+
+### Props
+
+| Prop       | Type      | Default |
+| ---------- | --------- | ------- |
+| `children` | ReactNode | -       |
+| `asChild`  | boolean   | false   |
+
+## TeaserSuccessMessage
+
+Success message text.
+
+```tsx
+<TeaserSuccessMessage>Custom success message</TeaserSuccessMessage>
+```
+
+### Props
+
+| Prop       | Type   | Default                       |
+| ---------- | ------ | ----------------------------- |
+| `children` | string | "Thanks! You're on the list." |

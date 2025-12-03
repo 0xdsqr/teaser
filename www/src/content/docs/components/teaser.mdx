@@ -1,0 +1,39 @@
+---
+title: Teaser
+description: Root container component
+---
+
+The main container component that wraps all teaser content.
+
+## Usage
+
+```tsx
+import { Teaser } from "@/components/ui/teaser";
+
+export default function ComingSoon() {
+  return <Teaser className="max-w-md">{/* Your content */}</Teaser>;
+}
+```
+
+## Props
+
+| Prop        | Type      | Default |
+| ----------- | --------- | ------- |
+| `children`  | ReactNode | -       |
+| `className` | string    | -       |
+
+## Example
+
+```tsx
+<Teaser className="max-w-md w-full">
+  <TeaserIcon animated>🚀</TeaserIcon>
+  <TeaserHeader>
+    <TeaserTitle>Coming Soon</TeaserTitle>
+    <TeaserDescription>Join our waitlist</TeaserDescription>
+  </TeaserHeader>
+  <TeaserForm onEmailSubmit={handleSubmit}>
+    <TeaserInput />
+    <TeaserButton>Notify Me</TeaserButton>
+  </TeaserForm>
+</Teaser>
+```

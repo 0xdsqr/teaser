@@ -1,0 +1,167 @@
+---
+title: API Reference
+description: Complete API documentation for Teaser components
+---
+
+Complete reference for all Teaser components and their props.
+
+## Teaser
+
+Root container component.
+
+```tsx
+<Teaser className="max-w-md">{/* Content */}</Teaser>
+```
+
+### Props
+
+| Prop        | Type      | Default |
+| ----------- | --------- | ------- |
+| `children`  | ReactNode | -       |
+| `className` | string    | -       |
+
+## TeaserIcon
+
+Icon display with optional animation.
+
+```tsx
+<TeaserIcon animated>🚀</TeaserIcon>
+```
+
+### Props
+
+| Prop        | Type      | Default |
+| ----------- | --------- | ------- |
+| `children`  | ReactNode | -       |
+| `animated`  | boolean   | false   |
+| `className` | string    | -       |
+
+## TeaserHeader
+
+Wrapper for title and description.
+
+```tsx
+<TeaserHeader>
+  <TeaserTitle>Title</TeaserTitle>
+  <TeaserDescription>Description</TeaserDescription>
+</TeaserHeader>
+```
+
+## TeaserTitle
+
+Main heading.
+
+```tsx
+<TeaserTitle>Your Heading</TeaserTitle>
+```
+
+### Props
+
+| Prop        | Type   | Default |
+| ----------- | ------ | ------- |
+| `children`  | string | -       |
+| `className` | string | -       |
+
+## TeaserDescription
+
+Subtitle text.
+
+```tsx
+<TeaserDescription>Your description</TeaserDescription>
+```
+
+### Props
+
+| Prop        | Type   | Default |
+| ----------- | ------ | ------- |
+| `children`  | string | -       |
+| `className` | string | -       |
+
+## TeaserForm
+
+Email form with validation.
+
+```tsx
+<TeaserForm onEmailSubmit={(email) => console.log(email)}>
+  <TeaserInput />
+  <TeaserButton>Submit</TeaserButton>
+</TeaserForm>
+```
+
+### Props
+
+| Prop            | Type                    | Default |
+| --------------- | ----------------------- | ------- |
+| `onEmailSubmit` | (email: string) => void | -       |
+| `children`      | ReactNode               | -       |
+
+## TeaserInput
+
+Email input field.
+
+```tsx
+<TeaserInput placeholder="you@example.com" />
+```
+
+### Props
+
+| Prop          | Type   | Default           |
+| ------------- | ------ | ----------------- |
+| `placeholder` | string | "you@example.com" |
+| `className`   | string | -                 |
+
+## TeaserButton
+
+Submit button.
+
+```tsx
+<TeaserButton>Notify Me</TeaserButton>
+```
+
+### Props
+
+| Prop        | Type   | Default     |
+| ----------- | ------ | ----------- |
+| `children`  | string | "Notify Me" |
+| `className` | string | -           |
+
+## TeaserSuccess
+
+Success state container.
+
+```tsx
+<TeaserSuccess>
+  <TeaserSuccessIcon>✨</TeaserSuccessIcon>
+  <TeaserSuccessMessage>Thanks!</TeaserSuccessMessage>
+</TeaserSuccess>
+```
+
+## TeaserSuccessIcon
+
+Success icon display.
+
+```tsx
+<TeaserSuccessIcon>✨</TeaserSuccessIcon>
+```
+
+### Props
+
+| Prop        | Type      | Default |
+| ----------- | --------- | ------- |
+| `children`  | ReactNode | -       |
+| `className` | string    | -       |
+
+## TeaserSuccessMessage
+
+Success message text.
+
+```tsx
+<TeaserSuccessMessage>Thanks for signing up!</TeaserSuccessMessage>
+```
+
+### Props
+
+| Prop        | Type   | Default                       |
+| ----------- | ------ | ----------------------------- |
+| `children`  | string | "Thanks! You're on the list." |
+| `className` | string | -                             |
