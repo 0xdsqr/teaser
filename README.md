@@ -1,7 +1,7 @@
 <div align="center">
-<img src="./.github/assets/teaser.svg" alt="teaser" width="200"/>
+<img src="./.github/assets/teaser.svg" alt="teaser" width="280"/>
 
-<p align="center">
+<p align="center" style="margin-top: 1.5rem;">
   <a href="https://github.com/dsqr/teaser"><img src="https://img.shields.io/badge/github-teaser-blue?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="#"><img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"></a>
   <a href="#"><img src="https://img.shields.io/badge/react-18%2B-61dafb?style=for-the-badge&logo=react" alt="React"></a>
@@ -10,13 +10,14 @@
 
 **Composable coming soon landing page components. Built with React, TypeScript, and Tailwind CSS.**
 
-*Install once. Use everywhere. Zero dependencies.*
+_Install once. Use everywhere. Zero dependencies._
 
 </div>
 
 ## ⇁ The Problem
 
 Coming soon pages require repetitive boilerplate:
+
 - Email input validation
 - Form state management
 - Success/error UI states
@@ -28,6 +29,7 @@ Building from scratch every time wastes time and introduces inconsistency.
 ## ⇁ The Solution
 
 Teaser provides battle-tested, composable components:
+
 - **Self-contained** - Each component works independently
 - **Composable** - Combine them exactly how you need
 - **Unstyled** - Use with any design system
@@ -37,9 +39,9 @@ Teaser provides battle-tested, composable components:
 ## ⇁ Quick Start
 
 ```tsx
-'use client'
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 import {
   Teaser,
   TeaserHeader,
@@ -52,10 +54,10 @@ import {
   TeaserSuccess,
   TeaserSuccessIcon,
   TeaserSuccessMessage,
-} from '@/components/ui/teaser'
+} from "@/components/ui/teaser";
 
 export default function ComingSoon() {
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(false);
 
   return (
     <main className="min-h-screen flex items-center justify-center">
@@ -82,7 +84,7 @@ export default function ComingSoon() {
         )}
       </Teaser>
     </main>
-  )
+  );
 }
 ```
 
@@ -90,14 +92,15 @@ That's it. Deploy it.
 
 ## ⇁ Installation
 
-| Package Manager | Command |
-|-----------------|---------|
-| bun | `bunx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/master/registry teaser` |
-| npm | `npx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/master/registry teaser` |
-| pnpm | `pnpm dlx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/master/registry teaser` |
-| yarn | `yarn dlx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/master/registry teaser` |
+| Package Manager | Command                                                                                                         |
+| --------------- | --------------------------------------------------------------------------------------------------------------- |
+| bun             | `bunx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/master/registry teaser`     |
+| npm             | `npx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/master/registry teaser`      |
+| pnpm            | `pnpm dlx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/master/registry teaser` |
+| yarn            | `yarn dlx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/master/registry teaser` |
 
 This single command installs:
+
 - **teaser.tsx** - All 12 components (Teaser, TeaserIcon, TeaserForm, TeaserButton, TeaserSuccess, etc.)
 - **Base components** - Button, Input, Select
 - **Utilities** - cn helper and CSS variables
@@ -110,13 +113,13 @@ Everything in one file, just like `shadcn add select`.
 <details><summary><strong>Teaser Components</strong></summary>
 
 **`<Teaser />`** - Root container
+
 ```tsx
-<Teaser className="max-w-md">
-  {/* Your content */}
-</Teaser>
+<Teaser className="max-w-md">{/* Your content */}</Teaser>
 ```
 
 **`<TeaserHeader />`** - Wraps title and description
+
 ```tsx
 <TeaserHeader>
   <TeaserTitle>Coming Soon</TeaserTitle>
@@ -161,10 +164,9 @@ Props:
 ```
 
 **`<TeaserContent />`** - Flexible content wrapper
+
 ```tsx
-<TeaserContent>
-  {/* Custom content */}
-</TeaserContent>
+<TeaserContent>{/* Custom content */}</TeaserContent>
 ```
 
 </details>
@@ -211,6 +213,7 @@ Props:
 <details><summary><strong>Success State Components</strong></summary>
 
 **`<TeaserSuccess />`** - Success container with fade-in animation
+
 ```tsx
 <TeaserSuccess>
   <TeaserSuccessIcon>✨</TeaserSuccessIcon>
@@ -271,7 +274,13 @@ import { Input } from '@/components/ui/input'
 **`Select`** - Accessible dropdown (Radix UI based)
 
 ```tsx
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 <Select>
   <SelectTrigger>
@@ -281,7 +290,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
     <SelectItem value="option-1">Option 1</SelectItem>
     <SelectItem value="option-2">Option 2</SelectItem>
   </SelectContent>
-</Select>
+</Select>;
 ```
 
 </details>

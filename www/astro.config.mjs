@@ -1,16 +1,10 @@
-import theme from "toolbeam-docs-theme";
-import starlight from "@astrojs/starlight";
-import { defineConfig } from "astro/config";
-import { rehypeHeadingIds } from "@astrojs/markdown-remark";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import config from "./config";
-
-const url = "http://localhost:3010";
-
-// https://astro.build/config
 export default defineConfig({
   site: url,
   trailingSlash: "never",
+  server: {
+    host: "0.0.0.0",
+    port: 3010,
+  },
   devToolbar: {
     enabled: false,
   },
@@ -28,7 +22,6 @@ export default defineConfig({
             sizes: "48x48",
           },
         },
-        // Add light/dark mode favicon
         {
           tag: "link",
           attrs: {

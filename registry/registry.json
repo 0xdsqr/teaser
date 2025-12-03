@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "dsqr-teaser",
   "description": "Coming soon landing page components with email capture form",
-  "homepage": "https://github.com/dsqr/teaser",
+  "homepage": "https://github.com/0xdsqr/teaser",
   "items": [
     {
       "name": "teaser",
