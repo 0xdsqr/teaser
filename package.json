@@ -1,0 +1,16 @@
+{
+  "name": "teaser",
+  "module": "index.ts",
+  "type": "module",
+  "workspaces": [
+    "packages/teaser",
+    "tooling/typescript"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true
+}
