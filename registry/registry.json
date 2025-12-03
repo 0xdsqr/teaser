@@ -8,284 +8,20 @@
       "name": "teaser",
       "type": "registry:component",
       "title": "Teaser",
-      "description": "Main teaser component - the root container for building coming soon landing pages",
+      "description": "Complete coming soon landing page component set with email capture, success states, and animations",
       "files": [
         {
           "path": "components/teaser.tsx",
           "type": "registry:component"
         },
         {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": ["class-variance-authority", "clsx", "tailwind-merge"]
-    },
-    {
-      "name": "teaser-icon",
-      "type": "registry:component",
-      "title": "Teaser Icon",
-      "description": "Icon display component with optional animation",
-      "files": [
-        {
-          "path": "components/teaser-icon.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": [
-        "@radix-ui/react-slot",
-        "class-variance-authority",
-        "clsx",
-        "tailwind-merge"
-      ]
-    },
-    {
-      "name": "teaser-header",
-      "type": "registry:component",
-      "title": "Teaser Header",
-      "description": "Container for title and description",
-      "files": [
-        {
-          "path": "components/teaser-header.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": ["class-variance-authority", "clsx", "tailwind-merge"]
-    },
-    {
-      "name": "teaser-title",
-      "type": "registry:component",
-      "title": "Teaser Title",
-      "description": "Main heading with support for custom elements via asChild prop",
-      "files": [
-        {
-          "path": "components/teaser-title.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": [
-        "@radix-ui/react-slot",
-        "class-variance-authority",
-        "clsx",
-        "tailwind-merge"
-      ]
-    },
-    {
-      "name": "teaser-description",
-      "type": "registry:component",
-      "title": "Teaser Description",
-      "description": "Subtitle text with support for custom elements via asChild prop",
-      "files": [
-        {
-          "path": "components/teaser-description.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": [
-        "@radix-ui/react-slot",
-        "class-variance-authority",
-        "clsx",
-        "tailwind-merge"
-      ]
-    },
-    {
-      "name": "teaser-content",
-      "type": "registry:component",
-      "title": "Teaser Content",
-      "description": "Flexible content wrapper",
-      "files": [
-        {
-          "path": "components/teaser-content.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": ["class-variance-authority", "clsx", "tailwind-merge"]
-    },
-    {
-      "name": "teaser-form",
-      "type": "registry:component",
-      "title": "Teaser Form",
-      "description": "Form component with email submission handling",
-      "files": [
-        {
-          "path": "components/teaser-form.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": ["class-variance-authority", "clsx", "tailwind-merge"]
-    },
-    {
-      "name": "input",
-      "type": "registry:component",
-      "title": "Input",
-      "description": "Base input field component",
-      "files": [
-        {
-          "path": "components/input.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": ["class-variance-authority", "clsx", "tailwind-merge"]
-    },
-    {
-      "name": "teaser-input",
-      "type": "registry:component",
-      "title": "Teaser Input",
-      "description": "Email input field with default placeholder and required attribute",
-      "files": [
-        {
-          "path": "components/teaser-input.tsx",
+          "path": "components/button.tsx",
           "type": "registry:component"
         },
         {
           "path": "components/input.tsx",
           "type": "registry:component"
         },
-        {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": ["class-variance-authority", "clsx", "tailwind-merge"]
-    },
-    {
-      "name": "button",
-      "type": "registry:component",
-      "title": "Button",
-      "description": "Reusable button with variants and sizes",
-      "files": [
-        {
-          "path": "components/button.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": [
-        "@radix-ui/react-slot",
-        "class-variance-authority",
-        "clsx",
-        "tailwind-merge"
-      ]
-    },
-    {
-      "name": "teaser-button",
-      "type": "registry:component",
-      "title": "Teaser Button",
-      "description": "Submit button with default text and responsive width",
-      "files": [
-        {
-          "path": "components/teaser-button.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "components/button.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": [
-        "@radix-ui/react-slot",
-        "class-variance-authority",
-        "clsx",
-        "tailwind-merge"
-      ]
-    },
-    {
-      "name": "teaser-success",
-      "type": "registry:component",
-      "title": "Teaser Success",
-      "description": "Success state container with fade and slide animations",
-      "files": [
-        {
-          "path": "components/teaser-success.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": ["class-variance-authority", "clsx", "tailwind-merge"]
-    },
-    {
-      "name": "teaser-success-icon",
-      "type": "registry:component",
-      "title": "Teaser Success Icon",
-      "description": "Success icon display component",
-      "files": [
-        {
-          "path": "components/teaser-success-icon.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": [
-        "@radix-ui/react-slot",
-        "class-variance-authority",
-        "clsx",
-        "tailwind-merge"
-      ]
-    },
-    {
-      "name": "teaser-success-message",
-      "type": "registry:component",
-      "title": "Teaser Success Message",
-      "description": "Success message text component",
-      "files": [
-        {
-          "path": "components/teaser-success-message.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "lib/utils.ts",
-          "type": "registry:lib"
-        }
-      ],
-      "dependencies": ["class-variance-authority", "clsx", "tailwind-merge"]
-    },
-    {
-      "name": "select",
-      "type": "registry:component",
-      "title": "Select",
-      "description": "Accessible select dropdown component using Radix UI",
-      "files": [
         {
           "path": "components/select.tsx",
           "type": "registry:component"
@@ -296,8 +32,8 @@
         }
       ],
       "dependencies": [
+        "@radix-ui/react-slot",
         "@radix-ui/react-select",
-        "lucide-react",
         "class-variance-authority",
         "clsx",
         "tailwind-merge"

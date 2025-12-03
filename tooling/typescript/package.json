@@ -1,7 +1,0 @@
-{
-  "name": "@teaser/tsconfig",
-  "private": true,
-  "files": [
-    "*.json"
-  ]
-}

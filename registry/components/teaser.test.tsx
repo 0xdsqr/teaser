@@ -14,7 +14,7 @@ import {
   TeaserSuccessIcon,
   TeaserSuccessMessage,
   TeaserTitle,
-} from "../../src/components/teaser"
+} from "./teaser"
 
 describe("Teaser Component", () => {
   it("renders teaser root container", () => {

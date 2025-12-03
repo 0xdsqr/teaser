@@ -98,12 +98,12 @@ That's it. Deploy it.
 | yarn | `yarn dlx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/main/registry teaser` |
 
 This single command installs:
-- All 12 teaser components (Teaser, TeaserIcon, TeaserForm, TeaserButton, TeaserSuccess, etc.)
-- Base components (Button, Input, Select)
-- Utilities (cn helper, CSS variables)
-- All dependencies
+- **teaser.tsx** - All 12 components (Teaser, TeaserIcon, TeaserForm, TeaserButton, TeaserSuccess, etc.)
+- **Base components** - Button, Input, Select
+- **Utilities** - cn helper and CSS variables
+- **Dependencies** - Radix UI, class-variance-authority, tailwind utilities
 
-Just like `shadcn add select` gives you the full Select component with its sub-parts, `shadcn add teaser` gives you everything you need.
+Everything in one file, just like `shadcn add select`.
 
 ## ⇁ API Reference
 

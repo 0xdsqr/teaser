@@ -1,5 +1,0 @@
----
-"@dsqr/teaser": patch
----
-
-...
