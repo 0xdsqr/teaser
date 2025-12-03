@@ -1,0 +1,4 @@
+[test]
+# Use jsdom for testing environment
+# This is needed for React Testing Library DOM tests
+preload = ["@happy-dom/global-registrator/register"]

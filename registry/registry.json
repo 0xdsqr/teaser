@@ -38,6 +38,53 @@
         "clsx",
         "tailwind-merge"
       ]
+    },
+    {
+      "name": "button",
+      "type": "registry:component",
+      "title": "Button",
+      "description": "A reusable button component with multiple variants",
+      "files": [
+        {
+          "path": "components/button.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:component",
+      "title": "Input",
+      "description": "A form input component",
+      "files": [
+        {
+          "path": "components/input.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:component",
+      "title": "Select",
+      "description": "A dropdown select component",
+      "files": [
+        {
+          "path": "components/select.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-select",
+        "clsx",
+        "tailwind-merge"
+      ]
     }
   ]
 }
