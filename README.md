@@ -34,26 +34,6 @@ Teaser provides battle-tested, composable components:
 - **Themeable** - CSS variables for instant customization
 - **No dependencies** - Pure React + Tailwind
 
-## ⇁ Installation
-
-Choose your registry:
-
-```bash
-npx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/main/registry teaser
-```
-
-Individual components:
-
-```bash
-npx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/main/registry teaser-form teaser-button teaser-input
-```
-
-All at once:
-
-```bash
-npx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/main/registry teaser teaser-icon teaser-header teaser-title teaser-description teaser-form teaser-input teaser-button teaser-success teaser-success-icon teaser-success-message
-```
-
 ## ⇁ Quick Start
 
 ```tsx
@@ -108,14 +88,31 @@ export default function ComingSoon() {
 
 That's it. Deploy it.
 
-## ⇁ Usage
+## ⇁ Installation
 
-### Container Components
+| Package Manager | Command |
+|-----------------|---------|
+| bun | `bunx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/main/registry teaser` |
+| npm | `npx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/main/registry teaser` |
+| pnpm | `pnpm dlx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/main/registry teaser` |
+| yarn | `yarn dlx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/main/registry teaser` |
+
+This single command installs:
+- All 12 teaser components (Teaser, TeaserIcon, TeaserForm, TeaserButton, TeaserSuccess, etc.)
+- Base components (Button, Input, Select)
+- Utilities (cn helper, CSS variables)
+- All dependencies
+
+Just like `shadcn add select` gives you the full Select component with its sub-parts, `shadcn add teaser` gives you everything you need.
+
+## ⇁ API Reference
+
+<details><summary><strong>Teaser Components</strong></summary>
 
 **`<Teaser />`** - Root container
 ```tsx
 <Teaser className="max-w-md">
-  {/* Content goes here */}
+  {/* Your content */}
 </Teaser>
 ```
 
@@ -123,58 +120,74 @@ That's it. Deploy it.
 ```tsx
 <TeaserHeader>
   <TeaserTitle>Coming Soon</TeaserTitle>
-  <TeaserDescription>Email to stay updated</TeaserDescription>
+  <TeaserDescription>Join our waitlist</TeaserDescription>
 </TeaserHeader>
 ```
 
-### Content Components
+**`<TeaserIcon />`** - Icon display with optional animation
 
-**`<TeaserIcon />`** - Display icon or emoji
+Props:
 | Prop | Type | Default |
 |------|------|---------|
-| `animated` | boolean | - |
+| `animated` | boolean | false |
 | `asChild` | boolean | false |
 
 ```tsx
 <TeaserIcon animated>🚀</TeaserIcon>
-<TeaserIcon asChild><CustomIcon /></TeaserIcon>
+<TeaserIcon asChild><RocketIcon /></TeaserIcon>
 ```
 
 **`<TeaserTitle />`** - Main heading
+
+Props:
 | Prop | Type | Default |
 |------|------|---------|
 | `asChild` | boolean | false |
 
 ```tsx
-<TeaserTitle>Your Title</TeaserTitle>
+<TeaserTitle>Your Heading</TeaserTitle>
 <TeaserTitle asChild><h1>Custom Heading</h1></TeaserTitle>
 ```
 
 **`<TeaserDescription />`** - Subtitle text
+
+Props:
 | Prop | Type | Default |
 |------|------|---------|
 | `asChild` | boolean | false |
 
 ```tsx
-<TeaserDescription>Your subtitle</TeaserDescription>
+<TeaserDescription>Describe your product</TeaserDescription>
 ```
 
-### Form Components
+**`<TeaserContent />`** - Flexible content wrapper
+```tsx
+<TeaserContent>
+  {/* Custom content */}
+</TeaserContent>
+```
 
-**`<TeaserForm />`** - Email form wrapper
+</details>
+
+<details><summary><strong>Form Components</strong></summary>
+
+**`<TeaserForm />`** - Email form with handler
+
+Props:
 | Prop | Type | Default |
 |------|------|---------|
 | `onEmailSubmit` | (email: string) => void | - |
 
 ```tsx
-<TeaserForm onEmailSubmit={(email) => handleEmail(email)}>
+<TeaserForm onEmailSubmit={(email) => console.log(email)}>
   <TeaserInput />
-  <TeaserButton>Submit</TeaserButton>
+  <TeaserButton>Notify Me</TeaserButton>
 </TeaserForm>
 ```
 
-**`<TeaserInput />`** - Email input field
-Auto-validated. Required. Placeholder: "you@example.com"
+**`<TeaserInput />`** - Pre-configured email input
+
+Auto-validates email. Required field. Default placeholder: "you@example.com"
 
 ```tsx
 <TeaserInput />
@@ -182,64 +195,100 @@ Auto-validated. Required. Placeholder: "you@example.com"
 ```
 
 **`<TeaserButton />`** - Submit button
+
+Props:
 | Prop | Type | Default |
 |------|------|---------|
 | `children` | string | "Notify Me" |
 
 ```tsx
 <TeaserButton>Get Notified</TeaserButton>
+<TeaserButton className="w-full">Subscribe</TeaserButton>
 ```
 
-### Success Components
+</details>
 
-**`<TeaserSuccess />`** - Success state container
+<details><summary><strong>Success State Components</strong></summary>
+
+**`<TeaserSuccess />`** - Success container with fade-in animation
 ```tsx
 <TeaserSuccess>
   <TeaserSuccessIcon>✨</TeaserSuccessIcon>
-  <TeaserSuccessMessage>Thanks for signing up!</TeaserSuccessMessage>
+  <TeaserSuccessMessage>Thanks for joining!</TeaserSuccessMessage>
 </TeaserSuccess>
 ```
 
-**`<TeaserSuccessIcon />`** - Success icon
+**`<TeaserSuccessIcon />`** - Success icon display
+
+Props:
 | Prop | Type | Default |
 |------|------|---------|
 | `asChild` | boolean | false |
 
 ```tsx
 <TeaserSuccessIcon>✨</TeaserSuccessIcon>
-<TeaserSuccessIcon asChild><CheckIcon /></TeaserSuccessIcon>
+<TeaserSuccessIcon asChild><CheckCircle /></TeaserSuccessIcon>
 ```
 
 **`<TeaserSuccessMessage />`** - Success text
+
+Props:
 | Prop | Type | Default |
 |------|------|---------|
 | `children` | string | "Thanks! You're on the list." |
 
 ```tsx
-<TeaserSuccessMessage>Custom message</TeaserSuccessMessage>
+<TeaserSuccessMessage>Custom success message</TeaserSuccessMessage>
 ```
 
-## ⇁ API Reference
+</details>
 
-### Base Components
+<details><summary><strong>Base Components</strong></summary>
 
-Components also include reusable base components:
+Includes reusable base components for other use cases:
 
-- **`Button`** - Variants: default, destructive, outline, secondary, ghost, link
-- **`Input`** - Text input with validation styling
-- **`Select`** - Accessible dropdown from Radix UI
+**`Button`** - Flexible button with variants
 
-Use them independently:
+Variants: `default`, `destructive`, `outline`, `secondary`, `ghost`, `link`
 
 ```tsx
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Select, SelectItem, SelectContent, SelectTrigger } from '@/components/ui/select'
+
+<Button>Default</Button>
+<Button variant="outline">Outline</Button>
+<Button variant="ghost" size="sm">Small Ghost</Button>
 ```
 
-### CSS Variables
+**`Input`** - Standard input field with styling
 
-Customize theming with CSS variables:
+```tsx
+import { Input } from '@/components/ui/input'
+
+<Input type="email" placeholder="Enter email" />
+<Input disabled />
+```
+
+**`Select`** - Accessible dropdown (Radix UI based)
+
+```tsx
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+
+<Select>
+  <SelectTrigger>
+    <SelectValue placeholder="Choose option" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="option-1">Option 1</SelectItem>
+    <SelectItem value="option-2">Option 2</SelectItem>
+  </SelectContent>
+</Select>
+```
+
+</details>
+
+<details><summary><strong>Theming with CSS Variables</strong></summary>
+
+Customize colors, spacing, and appearance via CSS variables:
 
 ```css
 :root {
@@ -247,6 +296,8 @@ Customize theming with CSS variables:
   --foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --border: oklch(0.922 0 0);
@@ -258,9 +309,15 @@ Customize theming with CSS variables:
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
-  /* ...dark mode overrides */
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  /* ...other dark mode variables */
 }
 ```
+
+All components automatically use these variables for consistent theming.
+
+</details>
 
 ## ⇁ Testing
 
@@ -282,30 +339,44 @@ npm run dev
 
 ## ⇁ Development
 
+Setup with Nix:
+
+```bash
+nix develop
+```
+
+This provides Bun, Node.js, and development tools across all platforms.
+
 Install dependencies:
 
 ```bash
 bun install
 ```
 
-Build packages:
+Build package:
 
 ```bash
 cd packages/teaser
 bun run build
 ```
 
-Run kitchen sink:
+Run example:
 
 ```bash
 cd examples/kitchen-sink
 npm run dev
 ```
 
+Format code:
+
+```bash
+nix fmt
+```
+
 ## ⇁ Contributing
 
-This is a learning project. Fork it and make it your own.
+Built for learning and experimentation. Open a PR or issue if you want, but no promises - this is a learning project. Feel free to fork it and make it your own!
 
 ## ⇁ License
 
-MIT
+MIT - Do whatever you want with it.
