@@ -92,10 +92,10 @@ That's it. Deploy it.
 
 | Package Manager | Command |
 |-----------------|---------|
-| bun | `bunx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/main/registry teaser` |
-| npm | `npx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/main/registry teaser` |
-| pnpm | `pnpm dlx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/main/registry teaser` |
-| yarn | `yarn dlx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/main/registry teaser` |
+| bun | `bunx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/master/registry teaser` |
+| npm | `npx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/master/registry teaser` |
+| pnpm | `pnpm dlx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/master/registry teaser` |
+| yarn | `yarn dlx shadcn-ui@latest add --registry https://raw.githubusercontent.com/dsqr/teaser/master/registry teaser` |
 
 This single command installs:
 - **teaser.tsx** - All 12 components (Teaser, TeaserIcon, TeaserForm, TeaserButton, TeaserSuccess, etc.)

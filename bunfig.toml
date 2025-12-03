@@ -1,4 +1,0 @@
-[test]
-root = "."
-preload = ["test/setup.ts"]
-timeout = 5000
